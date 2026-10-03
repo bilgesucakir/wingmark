@@ -114,12 +114,9 @@
     <h2 id="processors">5. Service providers</h2>
     <p>A few providers process data on our behalf to run Wingmark. They may only use it to provide their service to us, and we only work with providers that protect it to the same standard as this policy. Some are located outside Türkiye; where data is transferred abroad, it is done with the safeguards the law requires.</p>
     <ul>
-      <!-- TODO(owner): confirm the Render region in the dashboard (render.yaml says Frankfurt, but the live host resolves to gcp-us-west1), then add it, e.g. "in Frankfurt, Germany". -->
-      <li><strong>Render</strong> hosts the Wingmark server.</li>
-      <!-- TODO(owner): add the Atlas cluster region, e.g. "in Frankfurt, Germany". -->
-      <li><strong>MongoDB Atlas</strong> hosts the database where your account, sightings and photos are stored.</li>
-      <!-- TODO(owner): name the SMTP/email provider here. -->
-      <li><strong>An email delivery service</strong> sends account emails. It receives your email address and the content of those emails.</li>
+      <li><strong>Render</strong> hosts the Wingmark server, in Frankfurt, Germany.</li>
+      <li><strong>MongoDB Atlas</strong> hosts the database where your account, sightings and photos are stored, on Amazon Web Services in Frankfurt, Germany.</li>
+      <li><strong>Brevo</strong> sends our account emails (email verification and password reset). It receives your email address and the content of those emails.</li>
       <li><strong>Have I Been Pwned</strong> is used to check whether a new password has appeared in known data leaks. Only the first five characters of a scrambled (hashed) version of the password are sent, never the password itself or anything that identifies you.</li>
     </ul>
     <p>Some features make your phone connect directly to other services, which then see your IP address. Their own privacy policies apply:</p>
@@ -131,8 +128,8 @@
 
     <h2 id="retention">6. How long we keep it</h2>
     <p>We keep your data for as long as you have an account. A sighting you delete is removed straight away.</p>
-    <p>When you delete your account, your profile, sightings, notes, photos, badges, settings, consent records and sign-in sessions are removed from the live database immediately, and we email you to confirm. Any copies in our database provider’s backups are erased when those backups expire on its regular schedule.</p>
-    <!-- TODO(owner): once confirmed in Atlas, state the backup window, e.g. "within 30 days". -->
+    <p>When you delete your account, your profile, sightings, notes, photos, badges, settings, consent records and sign-in sessions are removed from the live database immediately, and we email you to confirm. We currently keep no database backups, so deleted data is not retained in backups.</p>
+    <!-- NOTE(owner): Atlas backups are currently inactive (checked in the Atlas dashboard). If backups are ever turned on, update this section and the Last updated date in BOTH language versions: state the backup retention period and when deleted data leaves the backups. -->
     <p>Password reset codes expire after 15 minutes. Sign-in sessions on a device end after 30 days without use, or straight away when you sign out.</p>
 
     <h2 id="rights">7. Your choices and rights</h2>

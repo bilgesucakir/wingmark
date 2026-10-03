@@ -114,12 +114,9 @@
     <h2 id="hizmet">5. Hizmet sağlayıcılar</h2>
     <p>Wingmark’ı çalıştırmak için birkaç sağlayıcı verileri bizim adımıza işler. Bu verileri yalnızca bize hizmet sunmak için kullanabilirler ve yalnızca verileri bu politikadaki düzeyde koruyan sağlayıcılarla çalışırız. Bazıları Türkiye dışındadır; veriler yurt dışına aktarıldığında bu, kanunun öngördüğü güvencelerle yapılır.</p>
     <ul>
-      <!-- TODO(owner): Render bölgesini panelden doğrula (render.yaml Frankfurt diyor ama canlı sunucu gcp-us-west1 çıkıyor), sonra ekle. -->
-      <li><strong>Render</strong>, Wingmark sunucusunu barındırır.</li>
-      <!-- TODO(owner): Atlas kümesinin bölgesini ekle, ör. "Frankfurt, Almanya’da". -->
-      <li><strong>MongoDB Atlas</strong>, hesabının, gözlemlerinin ve fotoğraflarının saklandığı veritabanını barındırır.</li>
-      <!-- TODO(owner): e-posta (SMTP) sağlayıcısının adını yaz. -->
-      <li><strong>Bir e-posta gönderim hizmeti</strong> hesap e-postalarını gönderir. E-posta adresini ve bu e-postaların içeriğini alır.</li>
+      <li><strong>Render</strong>, Wingmark sunucusunu Frankfurt, Almanya’da barındırır.</li>
+      <li><strong>MongoDB Atlas</strong>, hesabının, gözlemlerinin ve fotoğraflarının saklandığı veritabanını Frankfurt, Almanya’daki Amazon Web Services üzerinde barındırır.</li>
+      <li><strong>Brevo</strong> hesap e-postalarımızı (e-posta doğrulama ve şifre sıfırlama) gönderir. E-posta adresini ve bu e-postaların içeriğini alır.</li>
       <li><strong>Have I Been Pwned</strong>, yeni bir şifrenin bilinen veri sızıntılarında yer alıp almadığını kontrol etmek için kullanılır. Şifrenin kendisi ya da seni tanımlayan herhangi bir bilgi değil, yalnızca şifrenin karıştırılmış (hash) halinin ilk beş karakteri gönderilir.</li>
     </ul>
     <p>Bazı özellikler telefonunun doğrudan başka hizmetlere bağlanmasını sağlar; bu hizmetler IP adresini görür ve kendi gizlilik politikaları geçerlidir:</p>
@@ -131,8 +128,8 @@
 
     <h2 id="saklama">6. Ne kadar süre saklıyoruz</h2>
     <p>Verilerini hesabın olduğu sürece saklarız. Sildiğin bir gözlem hemen kaldırılır.</p>
-    <p>Hesabını sildiğinde profilin, gözlemlerin, notların, fotoğrafların, rozetlerin, ayarların, onay kayıtların ve oturumların canlı veritabanından hemen silinir ve onay için sana bir e-posta göndeririz. Veritabanı sağlayıcımızın yedeklerindeki kopyalar, bu yedeklerin olağan süresi dolduğunda silinir.</p>
-    <!-- TODO(owner): Atlas'ta doğrulandıktan sonra yedek süresini yaz, ör. "30 gün içinde". -->
+    <p>Hesabını sildiğinde profilin, gözlemlerin, notların, fotoğrafların, rozetlerin, ayarların, onay kayıtların ve oturumların canlı veritabanından hemen silinir ve onay için sana bir e-posta göndeririz. Şu anda veritabanı yedeği tutmuyoruz; bu nedenle silinen veriler yedeklerde saklanmaz.</p>
+    <!-- NOTE(owner): Atlas yedekleri şu anda kapalı (Atlas panelinde kontrol edildi). Yedekler açılırsa bu bölümü ve "Son güncelleme" tarihini HER İKİ dildeki sürümde güncelle: yedek saklama süresini ve silinen verilerin yedeklerden ne zaman çıktığını yaz. -->
     <p>Şifre sıfırlama kodları 15 dakika sonra geçersiz olur. Bir cihazdaki oturum 30 gün kullanılmadığında ya da çıkış yaptığında hemen sona erer.</p>
 
     <h2 id="haklar">7. Seçeneklerin ve hakların</h2>
