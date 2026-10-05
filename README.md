@@ -21,8 +21,3 @@ Settings → Pages → Source: *Deploy from a branch*, branch `main`, folder `/ 
 
 Links between pages are relative, except in `404.html`, which uses `/wingmark/...` because GitHub serves it
 at any path. Update those links if the site moves to a custom domain.
-
-## Keep in sync with the app
-
-Update both privacy pages (and their "Last updated" date), and any text that changes on a page in both languages, before submitting any app version that changes
-what data is collected or who processes it.
