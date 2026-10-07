@@ -19,16 +19,16 @@
 
 :root {
   color-scheme: light;
-  --paper: #f4fdfe;
+  --paper: #f1fdff;
   --ink: #0a0a0b;
   --muted: #4b5b5e;
   --accent: #a800b4;
   --mark: #df00eb;
-  --panel: #dcfbfe;
-  --map: #affafe;
-  --contour: #6fb7bf;
-  --water: #3aa2ad;
-  --rule: #bfe3e8;
+  --panel: #d1f9ff;
+  --map: #66efff;
+  --contour: #3fb3c2;
+  --water: #1c9aab;
+  --rule: #bfe9ef;
   --raised: #ffffff;
   --measure: 36rem;
 }
@@ -36,17 +36,17 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --paper: #101010;
-    --ink: #e8fbfc;
+    --paper: #121212;
+    --ink: #eafdff;
     --muted: #9db4b7;
-    --accent: #affafe;
+    --accent: #01f3ff;
     --mark: #df00eb;
-    --panel: #1b1e1f;
-    --map: #14191a;
-    --contour: #2c4a4e;
-    --water: #2e6a70;
-    --rule: #2a2e2f;
-    --raised: #1e2223;
+    --panel: #1c1c1d;
+    --map: #171819;
+    --contour: #24494e;
+    --water: #1d6f77;
+    --rule: #2a2d2e;
+    --raised: #1f2021;
   }
 }
 
