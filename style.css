@@ -19,13 +19,16 @@
 
 :root {
   color-scheme: light;
-  --paper: #ffffff;
-  --ink: #15241e;
-  --lichen: #5b6b63;
-  --kingfisher: #0a6b80;
-  --sky: #dce9ec;
-  --contour: #9fb4ab;
-  --rule: #cdd8d2;
+  --paper: #f4fdfe;
+  --ink: #0a0a0b;
+  --muted: #4b5b5e;
+  --accent: #a800b4;
+  --mark: #df00eb;
+  --panel: #dcfbfe;
+  --map: #affafe;
+  --contour: #6fb7bf;
+  --water: #3aa2ad;
+  --rule: #bfe3e8;
   --raised: #ffffff;
   --measure: 36rem;
 }
@@ -33,14 +36,17 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --paper: #111111;
-    --ink: #e2ebe6;
-    --lichen: #9aaca3;
-    --kingfisher: #79c9d8;
-    --sky: #15242a;
-    --contour: #2f4740;
-    --rule: #26352f;
-    --raised: #1c1c1c;
+    --paper: #101010;
+    --ink: #e8fbfc;
+    --muted: #9db4b7;
+    --accent: #affafe;
+    --mark: #df00eb;
+    --panel: #1b1e1f;
+    --map: #14191a;
+    --contour: #2c4a4e;
+    --water: #2e6a70;
+    --rule: #2a2e2f;
+    --raised: #1e2223;
   }
 }
 
@@ -65,7 +71,7 @@ body {
 }
 
 a {
-  color: var(--kingfisher);
+  color: var(--accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
@@ -75,7 +81,7 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 2px solid var(--kingfisher);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -142,7 +148,7 @@ a:hover {
 
 .lang-toggle a {
   padding: 0.15rem 0.65rem;
-  color: var(--lichen);
+  color: var(--muted);
   text-decoration: none;
 }
 
@@ -151,7 +157,7 @@ a:hover {
 }
 
 .lang-toggle a[aria-current="true"] {
-  background: var(--sky);
+  background: var(--panel);
   color: var(--ink);
   font-weight: 650;
 }
@@ -161,7 +167,7 @@ a:hover {
 }
 
 .site-nav a {
-  color: var(--lichen);
+  color: var(--muted);
   text-decoration: none;
 }
 
@@ -169,7 +175,7 @@ a:hover {
 .site-nav a[aria-current="page"] {
   color: var(--ink);
   text-decoration: underline;
-  text-decoration-color: var(--kingfisher);
+  text-decoration-color: var(--accent);
 }
 
 /* Type scale (1.25 ratio) */
@@ -222,16 +228,16 @@ strong {
 .lede {
   font-size: 1.3rem;
   line-height: 1.5;
-  color: var(--lichen);
+  color: var(--muted);
 }
 
 .meta {
-  color: var(--lichen);
+  color: var(--muted);
   font-size: 1rem;
 }
 
 .summary {
-  background: var(--sky);
+  background: var(--panel);
   border-radius: 6px;
   padding: 1.1rem 1.25rem;
   margin: 2rem 0;
@@ -285,7 +291,7 @@ strong {
   height: auto;
   display: block;
   border-radius: 10px;
-  background: var(--sky);
+  background: var(--map);
 }
 
 .field .contour {
@@ -296,8 +302,7 @@ strong {
 
 .field .water {
   fill: none;
-  stroke: var(--kingfisher);
-  stroke-opacity: 0.35;
+  stroke: var(--water);
   stroke-width: 5;
   stroke-linecap: round;
 }
@@ -308,11 +313,11 @@ strong {
 }
 
 .field .pin-selected {
-  fill: var(--kingfisher);
+  fill: var(--mark);
 }
 
 .field .pin-dot {
-  fill: var(--sky);
+  fill: var(--paper);
 }
 
 .entry {
@@ -335,7 +340,7 @@ strong {
 
 .entry .latin {
   font-style: italic;
-  color: var(--lichen);
+  color: var(--muted);
   margin: 0 0 0.6rem;
 }
 
@@ -345,7 +350,7 @@ strong {
 
 .entry .note {
   margin-top: 0.6rem;
-  color: var(--lichen);
+  color: var(--muted);
 }
 
 @media (max-width: 34rem) {
@@ -378,7 +383,7 @@ strong {
 }
 
 .features p {
-  color: var(--lichen);
+  color: var(--muted);
 }
 
 .status {
@@ -416,7 +421,7 @@ strong {
 
 /* Footer */
 .site-footer {
-  color: var(--lichen);
+  color: var(--muted);
   font-size: 0.95rem;
   padding: 2rem 0 2.5rem;
 }
@@ -435,7 +440,7 @@ strong {
 }
 
 .site-footer a {
-  color: var(--lichen);
+  color: var(--muted);
 }
 
 .site-footer p {
