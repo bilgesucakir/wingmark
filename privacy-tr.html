@@ -88,7 +88,7 @@
     </ul>
 
     <h3>Fotoğraflar</h3>
-    <p>Bir fotoğraf eklediğinde uygulama, gözlem formunu senin için doldurmak amacıyla fotoğrafın konumunu ve çekim zamanını telefonunda okur. Ardından fotoğraf yüklenir ve yeniden boyutlandırılır; sunucu, GPS konumu da dahil olmak üzere fotoğrafın içindeki tüm ek bilgileri (meta veriyi) siler. Saklanan tek konum, gözlem için onayladığın konumdur.</p>
+    <p>Bir fotoğraf eklediğinde uygulama, gözlem formunu senin için doldurmak amacıyla fotoğrafın konumunu ve çekim zamanını telefonunda okur. Ardından fotoğraf yüklenir ve yeniden boyutlandırılır; sunucu, GPS konumu da dahil olmak üzere fotoğrafın içindeki tüm ek bilgileri (meta veriyi) siler. Saklanan tek konum, gözlem için onayladığın konumdur. Her fotoğrafla birlikte küçük bir önizleme görseli (yaklaşık 400 piksel genişliğinde) de oluşturulur ve saklanır. Yüklenen fotoğraflar ve önizlemeleri, dosya depolama sağlayıcımızda saklanır (bkz. Hizmet sağlayıcılar).</p>
 
     <h3>Cihazının konumu</h3>
     <p>Uygulama konumunu yalnızca uygulamayı kullanırken ve sadece gözlem eklediğinde ya da bulunduğun yeri gösteren düğmeye dokunduğunda ister. Konum, gözlemin nerede olduğunu önermek için kullanılır ve yalnızca kaydettiğin bir gözlemin parçası olarak saklanır. Konum iznini vermezsen gözlemleri haritaya elle yerleştirebilirsin.</p>
@@ -114,14 +114,15 @@
 
     <h2 id="gorunurluk">5. Verilerini kim görebilir</h2>
     <p>Gözlemlerin, notların ve profilin yalnızca giriş yaptığında sana görünür. Wingmark’ta herkese açık profil, akış ya da paylaşım yoktur.</p>
-    <p>Yüklenen fotoğraflar, hiçbir yerde listelenmeyen ve aranamayan uzun, rastgele web adreslerinde saklanır. Uygulama onları yalnızca sana gösterir; ancak bir fotoğrafın tam adresine sahip olan biri onu açabilir.</p>
+    <p>Yüklenen fotoğraflar özel bir depolama alanında tutulur ve sunucumuz tarafından, hiçbir yerde listelenmeyen ve aranamayan uzun, rastgele web adreslerinden sunulur. Uygulama onları yalnızca sana gösterir; ancak bir fotoğrafın tam adresine sahip olan biri onu açabilir.</p>
     <p>Kişisel verilerini asla satmayız ve reklam amacıyla paylaşmayız. Yalnızca yasal bir zorunluluk olduğunda açıklarız.</p>
 
     <h2 id="hizmet">6. Hizmet sağlayıcılar</h2>
     <p>Wingmark’ı çalıştırmak için birkaç sağlayıcı verileri bizim adımıza işler. Bu verileri yalnızca bize hizmet sunmak için kullanabilirler ve yalnızca verileri bu politikadaki düzeyde koruyan sağlayıcılarla çalışırız. Bazıları Türkiye dışındadır; veriler yurt dışına aktarıldığında bu, kanunun öngördüğü güvencelerle yapılır.</p>
     <ul>
       <li><strong>Render</strong>, Wingmark sunucusunu Frankfurt, Almanya’da barındırır.</li>
-      <li><strong>MongoDB Atlas</strong>, hesabının, gözlemlerinin ve fotoğraflarının saklandığı veritabanını Frankfurt, Almanya’daki Amazon Web Services üzerinde barındırır.</li>
+      <li><strong>MongoDB Atlas</strong>, hesap bilgilerinin ve gözlemlerinin saklandığı veritabanını Frankfurt, Almanya’daki Amazon Web Services üzerinde barındırır.</li>
+      <li><strong>Cloudflare R2</strong>, yüklediğin fotoğrafları (gözlem fotoğrafları ve profil resimleri) ve her birinin küçük önizlemesini Avrupa Birliği içinde saklar. Yalnızca bu görsel dosyalarını alır; e-posta adresi, gözlem, not ya da hesap verisi almaz. Cloudflare bu verileri yalnızca depolama hizmeti sağlamak için işler ve veri işleme koşulları geçerlidir.</li>
       <li><strong>Brevo</strong> hesap e-postalarımızı (e-posta doğrulama ve şifre sıfırlama) gönderir. E-posta adresini ve bu e-postaların içeriğini alır.</li>
       <li><strong>Have I Been Pwned</strong>, yeni bir şifrenin bilinen veri sızıntılarında yer alıp almadığını kontrol etmek için kullanılır. Şifrenin kendisi ya da seni tanımlayan herhangi bir bilgi değil, yalnızca şifrenin karıştırılmış (hash) halinin ilk beş karakteri gönderilir.</li>
     </ul>
@@ -133,8 +134,8 @@
     </ul>
 
     <h2 id="saklama">7. Ne kadar süre saklıyoruz</h2>
-    <p>Verilerini hesabını silene kadar saklarız. Sildiğin bir gözlem hemen kaldırılır.</p>
-    <p>Hesabını sildiğinde profilin, gözlemlerin, notların, fotoğrafların, rozetlerin, ayarların, onay kayıtların ve oturumların canlı veritabanından hemen silinir ve onay için sana bir e-posta göndeririz. Şu anda veritabanı yedeği tutmuyoruz; bu nedenle silinen veriler yedeklerde saklanmaz.</p>
+    <p>Verilerini hesabını silene kadar saklarız. Sildiğin bir gözlem ya da kaldırdığın bir fotoğraf, depolamadaki fotoğraf dahil, hemen silinir.</p>
+    <p>Hesabını sildiğinde profilin, gözlemlerin, notların, rozetlerin, ayarların, onay kayıtların ve oturumların canlı veritabanından hemen silinir, yüklediğin fotoğraflar depolamadan silinir ve onay için sana bir e-posta göndeririz. Şu anda veritabanı yedeği tutmuyoruz; bu nedenle silinen veriler yedeklerde saklanmaz.</p>
     <!-- NOTE(owner): Atlas yedekleri şu anda kapalı (Atlas panelinde kontrol edildi). Yedekler açılırsa bu bölümü ve "Son güncelleme" tarihini HER İKİ dildeki sürümde güncelle: yedek saklama süresini ve silinen verilerin yedeklerden ne zaman çıktığını yaz. -->
     <p>2 yıl boyunca hiç etkinlik olmayan bir hesap silinir. Bu olmadan bir hafta önce, hesaptaki adrese bir uyarı e-postası göndeririz. O zamana kadar hâlâ etkinlik yoksa hesap silinir ve verilerin, hesabını kendin silmişsin gibi aynı şekilde silinir.</p>
     <p>Kaydolup e-posta adresini hiç onaylamazsan, onaylanmamış hesap 7 gün sonra silinir. Bu olduğunda sana e-posta göndermeyiz.</p>
@@ -154,7 +155,7 @@
     <p>Wingmark’ı kullanmak için en az 13 yaşında olmalısın. Wingmark 13 yaşından küçük çocuklara yönelik değildir ve onların verilerini bilerek toplamayız. Bir hesabın 13 yaşından küçük bir çocuğa ait olduğunu öğrenirsek hesabı ve verilerini sileriz. 13 yaşından küçük bir çocuğun hesap oluşturduğunu düşünüyorsan bize yaz, hesabı sileriz.</p>
 
     <h2 id="guvenlik">10. Güvenlik</h2>
-    <p>Uygulama ile sunucu arasındaki tüm trafik HTTPS ile şifrelenir; veritabanı da sağlayıcısı tarafından şifreli olarak saklanır. Şifreler yalnızca güvenli özetler olarak tutulur. Telefonunda oturum anahtarları iOS Anahtar Zinciri’nde saklanır. Oturumlar kısa ömürlüdür, tekrarlanan giriş denemeleri sınırlanır ve sunuculara yalnızca geliştirici erişebilir.</p>
+    <p>Uygulama ile sunucu arasındaki tüm trafik HTTPS ile şifrelenir; veritabanı da sağlayıcısı tarafından şifreli olarak saklanır. Yüklenen fotoğraflar yalnızca sunucumuzun erişebildiği özel bir depolama alanında tutulur. Şifreler yalnızca güvenli özetler olarak tutulur. Telefonunda oturum anahtarları iOS Anahtar Zinciri’nde saklanır. Oturumlar kısa ömürlüdür, tekrarlanan giriş denemeleri sınırlanır ve sunuculara yalnızca geliştirici erişebilir.</p>
 
     <h2 id="degisiklik">11. Politikadaki değişiklikler</h2>
     <p>Bu politika değiştiğinde en üstteki tarihi güncelleriz. Değişiklik verilerinin nasıl kullanıldığını etkiliyorsa, uygulama devam etmeden önce yeni sürümü sana gösterir ve kabul etmeni ister.</p>
