@@ -88,7 +88,7 @@
     </ul>
 
     <h3>Photos</h3>
-    <p>When you add a photo, the app reads its location and capture time on your phone to fill in the sighting form for you. The photo is then uploaded and resized, and the server removes its embedded metadata, including GPS location. The only location saved is the one you confirm for the sighting.</p>
+    <p>When you add a photo, the app reads its location and capture time on your phone to fill in the sighting form for you. The photo is then uploaded and resized, and the server removes its embedded metadata, including GPS location. The only location saved is the one you confirm for the sighting. A small preview image (about 400 pixels wide) is also created and stored with each photo. Uploaded photos and their previews are stored with our file-storage provider (see Service providers).</p>
 
     <h3>Your device’s location</h3>
     <p>The app asks for your location only while you’re using it, and only when you add a sighting or tap the button to show where you are. It is used to suggest where the sighting happened and is stored only as part of a sighting you save. If you don’t allow location access, you can place sightings on the map by hand.</p>
@@ -114,14 +114,15 @@
 
     <h2 id="visibility">5. Who can see your data</h2>
     <p>Your sightings, notes and profile are visible only to you when you’re signed in. Wingmark has no public profiles, feeds or sharing.</p>
-    <p>Uploaded photos are stored at long, random web addresses that are not listed or searchable anywhere. The app only shows them to you, but anyone who had the exact address of a photo could open it.</p>
+    <p>Uploaded photos are kept in a private storage bucket and served by our server at long, random web addresses that are not listed or searchable anywhere. The app only shows them to you, but anyone who had the exact address of a photo could open it.</p>
     <p>We never sell your personal data or share it for advertising. We only disclose it if the law requires us to.</p>
 
     <h2 id="processors">6. Service providers</h2>
     <p>A few providers process data on our behalf to run Wingmark. They may only use it to provide their service to us, and we only work with providers that protect it to the same standard as this policy. Some are located outside Türkiye; where data is transferred abroad, it is done with the safeguards the law requires.</p>
     <ul>
       <li><strong>Render</strong> hosts the Wingmark server, in Frankfurt, Germany.</li>
-      <li><strong>MongoDB Atlas</strong> hosts the database where your account, sightings and photos are stored, on Amazon Web Services in Frankfurt, Germany.</li>
+      <li><strong>MongoDB Atlas</strong> hosts the database where your account details and sightings are stored, on Amazon Web Services in Frankfurt, Germany.</li>
+      <li><strong>Cloudflare R2</strong> stores the photos you upload (sighting photos and profile pictures) and a small preview of each, in the European Union. It receives only these image files, and no email address, sightings, notes or account data. Cloudflare only processes this data to provide storage, and its data processing terms apply.</li>
       <li><strong>Brevo</strong> sends our account emails (email verification and password reset). It receives your email address and the content of those emails.</li>
       <li><strong>Have I Been Pwned</strong> is used to check whether a new password has appeared in known data leaks. Only the first five characters of a scrambled (hashed) version of the password are sent, never the password itself or anything that identifies you.</li>
     </ul>
@@ -133,8 +134,8 @@
     </ul>
 
     <h2 id="retention">7. How long we keep it</h2>
-    <p>We keep your data until you delete your account. A sighting you delete is removed straight away.</p>
-    <p>When you delete your account, your profile, sightings, notes, photos, badges, settings, consent records and sign-in sessions are removed from the live database immediately, and we email you to confirm. We currently keep no database backups, so deleted data is not retained in backups.</p>
+    <p>We keep your data until you delete your account. A sighting you delete, or a photo you remove, is deleted straight away, including the photo from storage.</p>
+    <p>When you delete your account, your profile, sightings, notes, badges, settings, consent records and sign-in sessions are removed from the live database immediately, your uploaded photos are deleted from storage, and we email you to confirm. We currently keep no database backups, so deleted data is not retained in backups.</p>
     <!-- NOTE(owner): Atlas backups are currently inactive (checked in the Atlas dashboard). If backups are ever turned on, update this section and the Last updated date in BOTH language versions: state the backup retention period and when deleted data leaves the backups. -->
     <p>An account that has had no activity for 2 years is deleted. One week before that happens, we send a warning email to the address on the account. If there is still no activity by then, the account is deleted and its data is erased in the same way as when you delete your account yourself.</p>
     <p>If you sign up but never confirm your email address, the unconfirmed account is deleted after 7 days. We don’t send you an email when this happens.</p>
@@ -154,7 +155,7 @@
     <p>You must be at least 13 years old to use Wingmark. It is not intended for children under 13, and we don’t knowingly collect their data. If we learn that an account belongs to a child under 13, we will delete the account and its data. If you think a child under 13 has created an account, contact us and we’ll delete it.</p>
 
     <h2 id="security">10. Security</h2>
-    <p>All traffic between the app and the server is encrypted with HTTPS, and the database is encrypted at rest by its provider. Passwords are stored only as secure hashes. On your phone, sign-in tokens are kept in the iOS Keychain. Sessions are short-lived, repeated sign-in attempts are limited, and only the developer can access the servers.</p>
+    <p>All traffic between the app and the server is encrypted with HTTPS, and the database is encrypted at rest by its provider. Uploaded photos are kept in a private storage bucket that only our server can access. Passwords are stored only as secure hashes. On your phone, sign-in tokens are kept in the iOS Keychain. Sessions are short-lived, repeated sign-in attempts are limited, and only the developer can access the servers.</p>
 
     <h2 id="changes">11. Changes to this policy</h2>
     <p>When this policy changes, we’ll update the date at the top. If a change affects how your data is used, the app will show you the new version and ask you to accept it before you continue.</p>
