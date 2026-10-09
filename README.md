@@ -7,11 +7,13 @@ Every page exists in English and Turkish. A toggle in the header switches betwee
 
 | English | Turkish | Used for |
 |---|---|---|
-| `index.html` (`/`) | `index-tr.html` | Landing page, App Store marketing URL |
-| `privacy.html` | `privacy-tr.html` | Privacy Policy (App Store Connect + in-app link) |
-| `support.html` | `support-tr.html` | App Store support URL |
-| `accessibility.html` | `accessibility-tr.html` | What the app supports for accessibility, and what it does not |
+| `/` (`index.html`) | `/index-tr` | Landing page, App Store marketing URL |
+| `/privacy` | `/privacy-tr` | Privacy Policy (App Store Connect + in-app link) |
+| `/support` | `/support-tr` | App Store support URL |
+| `/accessibility` | `/accessibility-tr` | What the app supports for accessibility, and what it does not |
 | `404.html` | (same page, both languages) | Not-found page |
+
+Each address is a file of the same name with `.html` in the repository (for example `/privacy` is `privacy.html`).
 
 Plain HTML with one stylesheet (`style.css`) and a self-hosted font (Literata, SIL OFL, in `fonts/`).
 No build step, no trackers, no third-party requests.
@@ -26,4 +28,4 @@ Hosted on Cloudflare (Workers & Pages), connected to this repository. Every push
 - No build command is needed. Deploy command: `npx wrangler deploy`.
 - Custom domain: Cloudflare project > Settings > Domains & Routes (wingmarkapp.com, and www redirecting to it).
 
-Links between pages are relative. `404.html` uses root paths (`/style.css`, `/privacy.html`) because it is served at any address, so the site must live at the root of its domain (it did before at `/wingmark/` on GitHub Pages, which no longer applies).
+Cloudflare drops the `.html` ending: `/privacy.html` redirects (307) to `/privacy`. Links between pages therefore use the clean root addresses (`/privacy`, `/support`, `/accessibility`, `/index-tr`, and so on; `/` for the English home page), and the `hreflang` tags use full `https://wingmarkapp.com/...` addresses. The site must live at the root of its domain, because `404.html` is served at any address and uses root paths (`/style.css`, `/privacy`).
