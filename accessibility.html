@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility · Wingmark</title>
+  <meta name="description" content="The accessibility features Wingmark supports on iPhone, and the ones we have not verified yet.">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/literata-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="en" href="accessibility.html">
+  <link rel="alternate" hreflang="tr" href="accessibility-tr.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wide">
+      <a class="brand" href="index.html"><picture><source srcset="img/bird-cyan.png" media="(prefers-color-scheme: dark)"><img src="img/bird-black.png" alt="" width="40" height="28"></picture>Wingmark</a>
+      <div class="header-end">
+        <nav class="site-nav" aria-label="Main">
+          <a href="privacy.html">Privacy</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <nav class="lang-toggle" aria-label="Language">
+          <a href="accessibility.html" lang="en" hreflang="en" aria-current="true">EN</a>
+          <a href="accessibility-tr.html" lang="tr" hreflang="tr">TR</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="column">
+    <h1>Accessibility</h1>
+    <p class="meta">Last updated: 9 October 2026</p>
+    <p class="lede">This page lists the iPhone accessibility features Wingmark supports and the ones we have not verified yet.</p>
+
+    <h2 id="supported">What we support</h2>
+    <ul>
+      <li><strong>Dark Interface.</strong> All screens work in dark mode.</li>
+      <li><strong>Larger Text.</strong> The app works at the largest text size. We found places where text overlapped and fixed them.</li>
+      <li><strong>Differentiate Without Color Alone.</strong> We don’t rely on colour alone. Badges show text and an icon. Errors and password rules have icons. Map pins change size and show a ring when selected. Life stage and sex are text chips, and active filter chips show a checkmark.</li>
+      <li><strong>Reduced Motion.</strong> The pin, form pin and map animations turn off when Reduce Motion is on.</li>
+    </ul>
+    <!-- NOTE(owner): "Sufficient Contrast" is deliberately not listed yet. Add it only once the last contrast fix is in the shipped build and Increase Contrast has been checked (iOS card wingmark-ios#73). -->
+
+    <h2 id="not-claimed">What we don’t claim yet</h2>
+    <ul>
+      <li><strong>VoiceOver.</strong> We have not verified Wingmark with VoiceOver yet.</li>
+      <li><strong>Voice Control.</strong> We have not verified Wingmark with Voice Control yet.</li>
+      <li><strong>Captions and audio descriptions.</strong> Not applicable. The app has no video, and the bird sounds are recordings without speech.</li>
+    </ul>
+
+    <h2 id="problem">Tell us about a problem</h2>
+    <p>If something in Wingmark is hard to use, email us at <a href="mailto:support.wingmark@gmail.com?subject=Wingmark%20accessibility">support.wingmark@gmail.com</a>. Tell us what happened, which accessibility setting you use, and your iPhone model and iOS version.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wide">
+      <p>© 2026 Bilgesu Çakır</p>
+    </div>
+  </footer>
+</body>
+</html>
