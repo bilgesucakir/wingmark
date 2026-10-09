@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erişilebilirlik · Wingmark</title>
+  <meta name="description" content="Wingmark’ın iPhone’da desteklediği erişilebilirlik özellikleri ve henüz doğrulamadıklarımız.">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/literata-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="en" href="accessibility.html">
+  <link rel="alternate" hreflang="tr" href="accessibility-tr.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wide">
+      <a class="brand" href="index-tr.html"><picture><source srcset="img/bird-cyan.png" media="(prefers-color-scheme: dark)"><img src="img/bird-black.png" alt="" width="40" height="28"></picture>Wingmark</a>
+      <div class="header-end">
+        <nav class="site-nav" aria-label="Ana menü">
+          <a href="privacy-tr.html">Gizlilik</a>
+          <a href="support-tr.html">Destek</a>
+        </nav>
+        <nav class="lang-toggle" aria-label="Dil">
+          <a href="accessibility.html" lang="en" hreflang="en">EN</a>
+          <a href="accessibility-tr.html" lang="tr" hreflang="tr" aria-current="true">TR</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="column">
+    <h1>Erişilebilirlik</h1>
+    <p class="meta">Son güncelleme: 9 Ekim 2026</p>
+    <p class="lede">Bu sayfa, Wingmark’ın desteklediği iPhone erişilebilirlik özelliklerini (kontrol ettiklerimize göre) ve henüz doğrulamadıklarımızı listeler.</p>
+
+    <h2 id="desteklenen">Desteklediklerimiz</h2>
+    <ul>
+      <li><strong>Koyu arayüz (Dark Interface).</strong> Tüm ekranlar koyu modda çalışır.</li>
+      <li><strong>Daha büyük metin (Larger Text).</strong> Uygulama en büyük metin boyutunda çalışır. Metinlerin üst üste bindiği yerleri bulduk ve düzelttik.</li>
+      <li><strong>Yalnızca renge güvenmeme (Differentiate Without Color Alone).</strong> Tek başına renge güvenmiyoruz. Rozetler metin ve simge gösterir. Hatalarda ve şifre kurallarında simgeler vardır. Harita iğneleri seçildiğinde boyut değiştirir ve halka gösterir. Yaşam evresi ve cinsiyet metin etiketleri olarak gösterilir, etkin filtre etiketlerinde bir onay işareti görünür.</li>
+      <li><strong>Hareketi azalt (Reduced Motion).</strong> Hareketi Azalt açıkken iğne, form iğnesi ve harita animasyonları kapanır.</li>
+    </ul>
+    <!-- NOTE(owner): "Yeterli karşıtlık" bilerek henüz listelenmedi. Yalnızca son karşıtlık düzeltmesi yayımlanan sürümde olduğunda ve Karşıtlığı Artır kontrol edildiğinde ekle (iOS kartı wingmark-ios#73). -->
+
+    <h2 id="iddia-edilmeyen">Henüz iddia etmediklerimiz</h2>
+    <ul>
+      <li><strong>VoiceOver.</strong> Wingmark’ı VoiceOver ile henüz doğrulamadık.</li>
+      <li><strong>Sesli Denetim (Voice Control).</strong> Wingmark’ı Sesli Denetim ile henüz doğrulamadık.</li>
+      <li><strong>Altyazılar ve sesli betimleme.</strong> Geçerli değil. Uygulamada video yoktur ve kuş sesleri konuşma içermeyen kayıtlardır.</li>
+    </ul>
+
+    <h2 id="sorun">Bir sorunu bize bildir</h2>
+    <p>Wingmark’ta kullanması zor bir şey varsa bize <a href="mailto:support.wingmark@gmail.com?subject=Wingmark%20eri%C5%9Filebilirlik">support.wingmark@gmail.com</a> adresinden yaz. Ne olduğunu, hangi erişilebilirlik ayarını kullandığını, iPhone modelini ve iOS sürümünü belirt.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wide">
+      <p>© 2026 Bilgesu Çakır</p>
+    </div>
+  </footer>
+</body>
+</html>
